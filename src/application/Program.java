@@ -36,11 +36,21 @@ public class Program {
 			System.out.println(obj);
 		}
 	    	
-	    	  System.out.println("\n=== TEST3: seller findAll ===");	
+	    	  System.out.println("\n=== TEST4: seller seller insert ===");	
 	    	  Seller newSeller = new Seller(null,"Greg","Greg@gmail.com", new java.util.Date(), 4000.0, department);
 	    	  sellerDao.insert(newSeller);
 	    	  System.out.println("inserted!  New id = " + newSeller.getId()) ;
+	    	  
+	    	  
+	    	  System.out.println("\n=== TEST5 update ===");	
+	    	  seller = sellerDao.findById(1);
+	    	  seller.setName("Marth Waine");
+	    	  sellerDao.update(seller);
+	    	  System.out.println("update completed");
+	    	  
 
 	}
+	
+	
 
 }
